@@ -18,4 +18,12 @@ public class Employee {
     private void privateMethod() {
         System.out.println("This is a private method.");
     }
+
+    public static void main(String[] args) {
+        Employee p1 = new Employee();
+        p1.name = "ram";
+        p1.empId = 10;
+
+        System.out.println();
+    }
 }

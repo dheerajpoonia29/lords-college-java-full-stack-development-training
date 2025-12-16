@@ -6,6 +6,10 @@ public class Car {
     int model;
     int companyName;
 
+    Car() {
+    }
+
+
     void start() {
         System.out.println("Car started");
     }
@@ -14,8 +18,9 @@ public class Car {
         System.out.println("Car stopped");
     }
 
-    void getTripMileage(int distance, int fuelConsumed) {
-        System.out.println("Trip mileage is: " + (distance / fuelConsumed) * mileage + " km/l");
+    int getTripMileage(int distance, int fuelConsumed) {
+        System. out.println("Trip mileage is: " + (distance / fuelConsumed) * mileage + " km/l");
+        return 10;
     }
 
     public static void main(String[] args) {
