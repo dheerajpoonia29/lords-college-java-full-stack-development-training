@@ -16,10 +16,11 @@ public class Question6 {
         arr2.add(5);
         arr2.add(4);
 
+        // 1,2,3,4,5
 
         // logic
-        ArrayList<Integer> output = solution1(arr1);
-        ArrayList<Integer> tempArr = solution1(arr2);
+        ArrayList<Integer> output = solution1(arr1); // 1,2,3
+        ArrayList<Integer> tempArr = solution1(arr2); // 3,4,5
 
         for(Integer ele: tempArr) {
             if(output.contains(ele) == false) {
