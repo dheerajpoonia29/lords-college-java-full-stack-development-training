@@ -1,4 +1,4 @@
-package org.example.module_5_collection_framework.list.linkedList.output;
+package org.example.module_5_collection_framework.list.linkedList.questions;
 
 import java.util.Arrays;
 import java.util.Iterator;
