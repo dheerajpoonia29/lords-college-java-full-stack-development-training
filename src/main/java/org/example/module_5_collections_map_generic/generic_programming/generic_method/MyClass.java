@@ -21,10 +21,12 @@ public class MyClass {
         System.out.println("Parameter value: " + parameter);
     }
 
+    // Generic method that returns a value of the same type as the parameter
     public <T> T method2(T parameter) {
         return parameter;
     }
 
+    // Generic method with multiple type parameters
     public <T, Z> T method3(T param1, Z param2) {
         return param1;
     }
