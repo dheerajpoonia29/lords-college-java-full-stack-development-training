@@ -1,12 +1,8 @@
-[
-  {
+{
+  "personName": "ram",
+  "address": {
     "street": "123 Main St",
     "city": "Springfield",
     "state": "IL"
-  },
-  {
-    "street": "456 Elm St",
-    "city": "Shelbyville",
-    "state": "IL"
   }
-]
+}

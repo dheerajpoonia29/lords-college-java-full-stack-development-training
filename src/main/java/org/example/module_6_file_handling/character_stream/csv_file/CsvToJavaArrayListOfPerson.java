@@ -19,10 +19,10 @@ public class CsvToJavaArrayListOfPerson {
 //            System.out.println("Name: " + person.name + ", Age: " + person.age + ", City: " + person.city);
 //        }
 
-        personArray.add(new Person("Jiva", 30, "New York"));
-        personArray.add(new Person("Abhey", 25, "Los Angeles"));
-        personArray.add(new Person("Ram", 35, "Chicago"));
-        personArray.add(new Person("Charley", 28, "Houston"));
+        personArray.add(new Person("abc", 30, "New York"));
+        personArray.add(new Person("xyz", 25, "Los Angeles"));
+        personArray.add(new Person("asdf", 35, "Chicago"));
+        personArray.add(new Person("asfdsafasdf", 28, "Houston"));
 
         // write this arraylist to csv file
         String content = "name, age, city\n";
