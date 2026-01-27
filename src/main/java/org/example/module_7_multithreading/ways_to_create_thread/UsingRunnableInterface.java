@@ -1,27 +1,34 @@
 package org.example.module_7_multithreading.ways_to_create_thread;
 
 public class UsingRunnableInterface {
-    public static void main(String[] args) {
-        Runnable task = new MyTask();   // step 1: create Runnable
-        Thread thread = new Thread(task); // step 2: pass Runnable to Thread
-        thread.start();                  // step 3: start thread
 
-        Runnable task1 = () -> {
-            System.out.println("Thread running using lambda");
+    public static void main(String[] args) {
+        Runnable runnableObj = () -> {
+            // task
+            for(int i=1; i<=5; i++){
+                System.out.println(Thread.currentThread().getName() + " i="+i);
+            }
         };
 
-        Thread thread2 = new Thread(task);
-        thread2.start();
+        Thread t0 = new Thread(runnableObj);
+        Thread t1 = new Thread(runnableObj);
 
-        Thread t = new Thread(() -> {
-            System.out.println("Running thread");
+        t0.start();
+        t1.start();
+
+        Thread t3 = new Thread(() -> {
+            // task
+            for(int i=1; i<=5; i++){
+                System.out.println(Thread.currentThread().getName() + " i="+i);
+            }
         });
-        t.start();
-    }
-}
-class MyTask implements Runnable {
-    @Override
-    public void run() {
-        System.out.println("Thread is running using Runnable");
+        Thread t4 = new Thread(() -> {
+            // task
+            for(int i=1; i<=5; i++){
+                System.out.println(Thread.currentThread().getName() + " i="+i);
+            }
+        });
+        t3.start();
+        t4.start();
     }
 }
