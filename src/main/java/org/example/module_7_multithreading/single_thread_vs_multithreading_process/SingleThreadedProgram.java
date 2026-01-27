@@ -1,6 +1,6 @@
 package org.example.module_7_multithreading.single_thread_vs_multithreading_process;
 
-public class Program1 {
+public class SingleThreadedProgram {
 
     // Program1 is single threaded program
 

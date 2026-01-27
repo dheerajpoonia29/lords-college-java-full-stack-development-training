@@ -1,9 +1,9 @@
 package org.example.module_7_multithreading.single_thread_vs_multithreading_process;
 
-public class Program2 {
+public class MultiThreadedProgram {
     public static void main(String[] args) {
 
-        // Program2 is multi-threaded program
+        // Program2 is a multi-threaded program
 
         Task1Thread t1Thread = new Task1Thread();
         Task2Thread t2Thread = new Task2Thread();
