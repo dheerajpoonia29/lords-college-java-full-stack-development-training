@@ -1,4 +1,4 @@
-package org.example.module_7_multithreading.inter_thread_communication;
+package org.example.module_7_multithreading.inter_thread_communication.bank_example;
 
 public class Main {
     public static void main(String[] args) {

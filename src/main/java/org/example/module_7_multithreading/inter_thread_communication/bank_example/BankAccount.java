@@ -1,4 +1,4 @@
-package org.example.module_7_multithreading.inter_thread_communication;
+package org.example.module_7_multithreading.inter_thread_communication.bank_example;
 
 public class BankAccount {
     public int balance;
@@ -9,7 +9,7 @@ public class BankAccount {
 
         while(balance < amount) {
             System.out.println(name + " waiting due to insufficient balance");
-            wait();
+            wait(); // pause here until some other thread called notify function
         }
 
         balance -= amount;
