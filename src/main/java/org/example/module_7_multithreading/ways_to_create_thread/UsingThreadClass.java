@@ -2,18 +2,29 @@ package org.example.module_7_multithreading.ways_to_create_thread;
 
 public class UsingThreadClass {
     public static void main(String[] args) {
-        MyThread t0 = new MyThread();
-        MyThread t1 = new MyThread();
+        MyThread1 t1 = new MyThread1();
+        MyThread2 t2 = new MyThread2();
 
-        t0.start();
         t1.start();
+        t2.start();
     }
 }
 
-class MyThread extends Thread {
+class MyThread1 extends Thread {
+    @Override
     public void run() {
-        // task
+        // task 1
         for(int i=1; i<=5; i++){
+            System.out.println(Thread.currentThread().getName() + " i="+i);
+        }
+    }
+}
+
+class MyThread2 extends Thread {
+    @Override
+    public void run() {
+        // task 2
+        for(int i=1; i<=10; i++){
             System.out.println(Thread.currentThread().getName() + " i="+i);
         }
     }
