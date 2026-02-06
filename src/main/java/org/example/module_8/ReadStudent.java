@@ -3,7 +3,7 @@ package org.example.module_8;
 // step 1 - Import the packages
 import java.sql.*;
 
-public class ReadFromDatabase {
+public class ReadStudent {
     // Constant
     static final String DATABASE_URL = "jdbc:mysql://localhost/";
     static final String DATABASE_NAME = "college_db";
@@ -17,7 +17,8 @@ public class ReadFromDatabase {
 
         // step 3 - Execute a query
         Statement obj = conn.createStatement();
-        ResultSet data = obj.executeQuery("SELECT * FROM students");
+        String sqlQuery = "SELECT * FROM students";
+        ResultSet data = obj.executeQuery(sqlQuery);
 
         // step 4 - Extract data from result set
         while (data.next()) {
