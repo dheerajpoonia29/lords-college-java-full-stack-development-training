@@ -17,8 +17,8 @@ public class ReadStudent {
 
         // step 3 - Execute a query
         Statement obj = conn.createStatement();
-        String query = "SELECT * FROM students";
-        ResultSet data = obj.executeQuery(query);
+        String sqlQuery = "SELECT * FROM students";
+        ResultSet data = obj.executeQuery(sqlQuery);
 
         // step 4 - Extract data from result set
         while (data.next()) {
