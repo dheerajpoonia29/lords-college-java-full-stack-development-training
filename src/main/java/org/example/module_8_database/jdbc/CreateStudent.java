@@ -1,15 +1,14 @@
-package org.example.module_8;
+package org.example.module_8_database.jdbc;
 
 // step 1 - Import the packages
 import java.sql.*;
 
-public class ReadStudent {
-    // Constant
+public class CreateStudent {
+    // in jdbc we defined database configuration like this
     static final String DATABASE_URL = "jdbc:mysql://localhost/";
     static final String DATABASE_NAME = "college_db";
     static final String USERNAME = "root";
     static final String PASSWORD = "root1234";
-
 
     public static void main(String[] args) throws SQLException {
         // step 2 - Open a connection
@@ -17,13 +16,13 @@ public class ReadStudent {
 
         // step 3 - Execute a query
         Statement obj = conn.createStatement();
-        String sqlQuery = "SELECT * FROM students";
-        ResultSet data = obj.executeQuery(sqlQuery);
+        String values = "(3, 'joe', 'joe@gmail.com', 22, 'cse')";
+        String sqlQuery = "INSERT INTO students VALUES" + values;
+        int row = obj.executeUpdate(sqlQuery);
 
-        // step 4 - Extract data from result set
-        while (data.next()) {
-            System.out.println(data.getInt("student_id") +" - " + data.getString("name") +
-                    " - " + data.getString("email") + " - " + data.getInt("age") + " - " + data.getString("department"));
+        // step 4 - if executeUpdate function successfully called row count is greater then 0
+        if(row==1) {
+            System.out.println("Student record inserted.");
         }
 
         // step 5 - close connection

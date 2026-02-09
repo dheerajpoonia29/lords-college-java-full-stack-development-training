@@ -1,4 +1,4 @@
-package org.example.module_8;
+package org.example.module_8_database.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
