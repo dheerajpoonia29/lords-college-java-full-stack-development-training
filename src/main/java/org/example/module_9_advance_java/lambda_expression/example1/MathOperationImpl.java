@@ -1,6 +1,6 @@
-package org.example.module_9_advance_java.lambda_expression;
+package org.example.module_9_advance_java.lambda_expression.example1;
 
-public class LearningLambdaExpression {
+public class MathOperationImpl {
 
     static MathOperation additionObj = (a, b) -> a + b;
 
