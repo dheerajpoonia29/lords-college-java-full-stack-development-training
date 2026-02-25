@@ -2,22 +2,22 @@ package org.example.module_9_advance_java.lambda_expression;
 
 public class LearningLambdaExpression {
 
-    static MathOperation addition = (a, b) -> a + b;
+    static MathOperation additionObj = (a, b) -> a + b;
 
-    static MathOperation subtraction = (a, b) -> a - b;
+    static MathOperation subtractionObj = (a, b) -> a - b;
 
-    static MathOperation multiplication = (a, b) -> a * b;
+    static MathOperation multiplicationObj = (a, b) -> a * b;
 
-    static MathOperation division = (a, b) -> a / b;
+    static MathOperation divisionObj = (a, b) -> a / b;
 
     public static void main(String[] args) {
         int a = 10;
         int b = 5;
 
-        System.out.println("Addition: " + addition.operation(a, b));
-        System.out.println("Subtraction: " + subtraction.operation(a, b));
-        System.out.println("Multiplication: " + multiplication.operation(a, b));
-        System.out.println("Division: " + division.operation(a, b));
+        System.out.println("Addition: " + additionObj.operation(a, b));
+        System.out.println("Subtraction: " + subtractionObj.operation(a, b));
+        System.out.println("Multiplication: " + multiplicationObj.operation(a, b));
+        System.out.println("Division: " + divisionObj.operation(a, b));
     }
 
     // basic function
